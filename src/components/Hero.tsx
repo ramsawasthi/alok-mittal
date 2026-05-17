@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import { tributeConfig } from '../tribute.config'
+import { siteConfig } from '../site.config'
 import { ParticleField } from './ParticleField'
-import { TributeImage } from './TributeImage'
+import { StoryImage } from './StoryImage'
 
 export function Hero() {
   const scrollToMemories = () => {
@@ -29,7 +29,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          A tribute
+          A celebration
         </motion.p>
         <motion.h1
           id="hero-title"
@@ -53,7 +53,7 @@ export function Hero() {
             A builder, mentor, investor, and institution creator.
           </p>
           <p className="text-sm font-light leading-relaxed text-slate-500 md:text-base">
-            A tribute to India’s early internet and startup ecosystem.
+            Celebrating India’s early internet and startup ecosystem.
           </p>
         </motion.div>
 
@@ -67,12 +67,12 @@ export function Hero() {
             className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full border border-gold/35 bg-slate-deep/50 shadow-[0_0_48px_-12px_rgba(212,168,83,0.5)] ring-1 ring-white/10 sm:h-32 sm:w-32"
             aria-hidden
           >
-            <TributeImage
-              src={tributeConfig.images.alokPortrait}
+            <StoryImage
+              src={siteConfig.images.alokPortrait}
               alt=""
               className="h-full w-full"
               imgClassName="object-cover object-center"
-              hint="Add a photograph at public/tribute/alok.jpg if you’d like this circle to carry a portrait."
+              hint="Add a portrait to public/media/alok.jpg if you’d like this circle to show a photo."
             />
           </div>
           <p className="max-w-xs text-center text-xs font-light leading-relaxed text-slate-500 sm:text-left">

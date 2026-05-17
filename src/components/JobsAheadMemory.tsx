@@ -1,8 +1,8 @@
 import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Reveal } from './Reveal'
-import { TributeImage } from './TributeImage'
-import { tributeConfig } from '../tribute.config'
+import { siteConfig } from '../site.config'
+import { StoryImage } from './StoryImage'
 
 const jobsAheadMore = (
   <>
@@ -100,12 +100,12 @@ export function JobsAheadMemory() {
               </div>
 
               <div className="relative aspect-[16/10] max-h-[min(52vh,420px)] border-b border-white/[0.06]">
-                <TributeImage
-                  src={tributeConfig.images.jobsAhead}
+                <StoryImage
+                  src={siteConfig.images.jobsAhead}
                   alt="1990s-style desktop computer and keyboard on a desk — stock photo for era mood, not an official JobsAhead product screen"
                   className="h-full min-h-[200px] w-full"
                   imgClassName="scale-[1.02] contrast-[0.94] saturate-[0.92]"
-                  hint="Replace `public/tribute/jobsahead.jpg` with your own JobsAhead-era photo or UI if you have rights to publish it."
+                  hint="Replace public/media/jobsahead.jpg with a JobsAhead-era photo or UI you may publish."
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ja-midnight/95 via-ja-sky/[0.04] to-transparent" />
               </div>

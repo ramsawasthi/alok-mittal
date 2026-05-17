@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-type TributeImageProps = {
+type StoryImageProps = {
   src: string
   alt: string
   className?: string
@@ -8,13 +8,13 @@ type TributeImageProps = {
   hint: string
 }
 
-export function TributeImage({
+export function StoryImage({
   src,
   alt,
   className = '',
   imgClassName = '',
   hint,
-}: TributeImageProps) {
+}: StoryImageProps) {
   const [failed, setFailed] = useState(false)
 
   if (!src) {

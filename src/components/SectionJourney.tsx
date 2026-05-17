@@ -64,7 +64,7 @@ export function SectionJourney() {
 
   return (
     <nav
-      aria-label="Move through the tribute"
+      aria-label="Navigate this birthday celebration"
       className="fixed inset-x-0 bottom-0 z-[60] border-t border-white/[0.09] bg-[linear-gradient(180deg,rgba(2,6,23,0.72)_0%,rgba(2,6,23,0.94)_40%,#020617_100%)] shadow-[0_-32px_64px_-28px_rgba(0,0,0,0.75)] backdrop-blur-2xl"
     >
       <div className="h-px w-full bg-gradient-to-r from-transparent via-gold/35 to-transparent opacity-80" />

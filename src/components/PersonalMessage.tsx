@@ -1,5 +1,5 @@
 import { Reveal } from './Reveal'
-import { tributeConfig } from '../tribute.config'
+import { siteConfig } from '../site.config'
 
 export function PersonalMessage() {
   return (
@@ -48,10 +48,10 @@ export function PersonalMessage() {
               <span className="text-mist">Ram</span>
             </p>
 
-            {tributeConfig.sendNoteMailto ? (
+            {siteConfig.sendNoteMailto ? (
               <div className="mt-10 border-t border-white/[0.08] pt-8 text-center">
                 <a
-                  href={tributeConfig.sendNoteMailto}
+                  href={siteConfig.sendNoteMailto}
                   className="inline-flex items-center justify-center rounded-full border border-gold/30 bg-gold/5 px-6 py-2.5 text-sm font-medium tracking-wide text-amber-100 transition hover:border-gold/50 hover:bg-gold/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold/60"
                 >
                   Send a quiet note

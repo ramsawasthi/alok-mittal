@@ -72,12 +72,12 @@ export function Hero() {
               alt=""
               className="h-full w-full"
               imgClassName="object-cover object-center"
-              hint="Replace `public/tribute/alok.jpg` with a portrait you own or may publish (see attribution in tribute.config.ts)."
+              hint="Add a photograph at public/tribute/alok.jpg if you’d like this circle to carry a portrait."
             />
           </div>
           <p className="max-w-xs text-center text-xs font-light leading-relaxed text-slate-500 sm:text-left">
-            Shown now: soft gold light (stock, Unsplash) as a calm placeholder — swap the
-            file for a real portrait when you have one you are happy to use.
+            A small frame beside the story — for the presence behind years of building,
+            mentoring, and institutions.
           </p>
         </motion.div>
 

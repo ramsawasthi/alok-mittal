@@ -2,7 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
 const SECTIONS = [
-  { id: 'welcome', label: 'Welcome', short: 'Start' },
+  { id: 'welcome', label: 'Home', short: 'Home' },
   { id: 'memories', label: 'JobsAhead', short: '1999' },
   { id: 'timeline', label: 'Timeline', short: 'Years' },
   { id: 'impact', label: 'Impact', short: 'Impact' },
@@ -65,13 +65,11 @@ export function SectionJourney() {
   return (
     <nav
       aria-label="Navigate this birthday celebration"
-      className="fixed inset-x-0 bottom-0 z-[60] border-t border-white/[0.09] bg-[linear-gradient(180deg,rgba(2,6,23,0.72)_0%,rgba(2,6,23,0.94)_40%,#020617_100%)] shadow-[0_-32px_64px_-28px_rgba(0,0,0,0.75)] backdrop-blur-2xl"
+      className="fixed inset-x-0 bottom-0 z-[60] border-t-2 border-[#2a6ebb] bg-gradient-to-b from-[#2f7fd4] to-[#1a5cad] shadow-[0_-8px_24px_rgba(0,0,0,0.15)]"
     >
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-gold/35 to-transparent opacity-80" />
-
-      <div className="h-1 w-full bg-white/[0.06]">
+      <div className="h-1 w-full bg-white/20">
         <motion.div
-          className="h-full bg-gradient-to-r from-gold/40 via-gold to-amber-200/90"
+          className="h-full bg-[#cc0000]"
           initial={false}
           animate={{ scaleX: progress }}
           transition={{
@@ -83,31 +81,28 @@ export function SectionJourney() {
         />
       </div>
 
-      <div className="mx-auto flex max-w-5xl items-stretch gap-2 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 sm:gap-3 sm:px-5">
+      <div className="mx-auto flex max-w-6xl items-stretch gap-2 px-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2 sm:gap-3 sm:px-4 sm:pb-3 sm:pt-3">
         <button
           type="button"
           onClick={goPrev}
           disabled={activeIndex <= 0}
           aria-label="Previous section"
-          className="flex h-11 w-11 shrink-0 items-center justify-center self-center rounded-xl border border-white/[0.1] bg-white/[0.04] text-sm text-slate-200 transition hover:border-gold/35 hover:bg-white/[0.07] hover:text-amber-50 disabled:pointer-events-none disabled:opacity-20 sm:h-12 sm:w-12"
+          className="flex h-10 w-10 shrink-0 items-center justify-center self-center rounded border border-white/30 bg-white/10 text-sm font-bold text-white transition hover:bg-white/20 disabled:pointer-events-none disabled:opacity-30 sm:h-11 sm:w-11"
         >
           ↑
         </button>
 
-        <div className="flex min-w-0 flex-1 flex-col gap-1.5">
+        <div className="flex min-w-0 flex-1 flex-col gap-1">
           <div className="flex items-center justify-between gap-2 px-0.5">
-            <span className="font-mono text-[9px] font-medium uppercase tracking-[0.28em] text-gold/55">
-              Journey
+            <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/80">
+              Sections
             </span>
-            <span className="truncate text-right font-display text-xs text-slate-500 sm:text-sm">
-              <span className="text-slate-600">Now · </span>
-              <span className="text-slate-300">{activeMeta.label}</span>
+            <span className="truncate text-right text-[10px] text-white/90 sm:text-xs">
+              Now: <span className="font-semibold">{activeMeta.label}</span>
             </span>
           </div>
 
-          <div
-            className="flex gap-1.5 overflow-x-auto overscroll-x-contain py-0.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-          >
+          <div className="flex gap-1 overflow-x-auto overscroll-x-contain py-0.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {SECTIONS.map((s) => {
               const isActive = s.id === active
               return (
@@ -117,10 +112,10 @@ export function SectionJourney() {
                   aria-current={isActive ? 'true' : undefined}
                   title={s.label}
                   onClick={() => scrollToId(s.id)}
-                  className={`shrink-0 rounded-full border px-2.5 py-2 text-[10px] font-medium uppercase tracking-[0.14em] transition sm:px-3.5 sm:text-[11px] sm:tracking-[0.16em] ${
+                  className={`shrink-0 rounded-sm border px-2 py-1.5 text-[10px] font-semibold uppercase tracking-wide transition sm:px-2.5 sm:text-[11px] ${
                     isActive
-                      ? 'border-gold/45 bg-gradient-to-b from-gold/20 to-gold/5 text-amber-50 shadow-[0_0_24px_-6px_rgba(212,168,83,0.45)]'
-                      : 'border-transparent bg-white/[0.04] text-slate-500 hover:border-white/10 hover:bg-white/[0.07] hover:text-slate-200'
+                      ? 'border-[#cc0000] bg-[#cc0000] text-white shadow'
+                      : 'border-white/25 bg-white/10 text-white hover:bg-white/20'
                   }`}
                 >
                   <span className="sm:hidden">{s.short}</span>
@@ -136,7 +131,7 @@ export function SectionJourney() {
           onClick={goNext}
           disabled={activeIndex < 0 || activeIndex >= SECTIONS.length - 1}
           aria-label="Next section"
-          className="flex h-11 w-11 shrink-0 items-center justify-center self-center rounded-xl border border-gold/30 bg-gold/10 text-sm font-medium text-amber-50 transition hover:border-gold/50 hover:bg-gold/15 disabled:pointer-events-none disabled:opacity-20 sm:h-12 sm:w-12"
+          className="flex h-10 w-10 shrink-0 items-center justify-center self-center rounded border border-[#cc0000] bg-[#cc0000] text-sm font-bold text-white shadow transition hover:bg-[#b30000] disabled:pointer-events-none disabled:opacity-30 sm:h-11 sm:w-11"
         >
           ↓
         </button>

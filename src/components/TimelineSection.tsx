@@ -50,51 +50,47 @@ export function TimelineSection() {
   return (
     <section
       id="timeline"
-      className="relative scroll-mt-6 border-t border-white/[0.06] bg-gradient-to-b from-void via-ink to-void px-6 py-24 md:py-32"
+      className="scroll-mt-4 border border-[#c5cad3] bg-white px-3 py-8 shadow-sm sm:px-5 sm:py-10"
       aria-labelledby="timeline-heading"
     >
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-
-      <div className="relative mx-auto max-w-3xl">
+      <div className="relative mx-auto max-w-3xl font-sans">
         <Reveal>
           <h2
             id="timeline-heading"
-            className="text-center font-display text-3xl font-medium text-mist md:text-4xl"
+            className="text-center text-2xl font-bold text-[#0066cc] sm:text-3xl"
           >
             Through the years
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-sm text-slate-400 md:text-base">
+          <p className="mx-auto mt-2 max-w-xl text-center text-sm text-[#6b7280] sm:text-base">
             A concise arc — ventures, platforms, and institutions that echo far beyond any
             single headline.
           </p>
         </Reveal>
 
-        <ol className="relative mt-16 space-y-0">
-          <div className="absolute left-[11px] top-2 hidden h-[calc(100%-1rem)] w-px bg-gradient-to-b from-gold/40 via-gold/15 to-transparent md:block" />
+        <ol className="relative mt-10 space-y-0">
+          <div className="absolute left-[11px] top-2 hidden h-[calc(100%-1rem)] w-px bg-gradient-to-b from-[#0066cc]/50 via-[#0066cc]/20 to-transparent md:block" />
 
           {milestones.map((m, i) => (
             <Reveal key={m.title} delay={0.05 * i}>
-              <li className="relative grid gap-4 pb-12 md:grid-cols-[7rem_1fr] md:gap-10 md:pb-14">
+              <li className="relative grid gap-4 pb-10 md:grid-cols-[7rem_1fr] md:gap-8 md:pb-12">
                 <div className="flex items-start gap-4 md:block">
                   <motion.span
-                    className="relative mt-1.5 flex h-3 w-3 shrink-0 rounded-full border border-gold/50 bg-gradient-to-br from-gold to-amber-700 shadow-[0_0_20px_rgba(212,168,83,0.45)] md:mt-2"
+                    className="relative mt-1.5 flex h-3 w-3 shrink-0 rounded-full border-2 border-[#0066cc] bg-[#cc0000] md:mt-2"
                     initial={{ scale: 0.6, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.45, delay: 0.05 * i }}
                   />
-                  <time className="font-mono text-xs uppercase tracking-[0.2em] text-gold/80 md:mt-3 md:block">
+                  <time className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-[#0066cc] md:mt-2 md:block md:text-xs">
                     {m.era}
                   </time>
                 </div>
-                <div className="border border-white/[0.07] bg-white/[0.02] px-5 py-5 md:px-7 md:py-6">
-                  <h3 className="font-display text-xl font-medium text-mist md:text-2xl">
-                    {m.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-400 md:text-[15px]">
+                <div className="rounded-md border border-[#d1d5db] bg-[#fafbfc] px-4 py-4 shadow-sm md:px-5 md:py-5">
+                  <h3 className="text-lg font-bold text-[#1a1a1a] md:text-xl">{m.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[#4b5563] md:text-[15px]">
                     {m.note}
                   </p>
-                  <p className="mt-3 border-l border-gold/20 pl-4 text-[13px] leading-relaxed text-slate-500 md:text-sm">
+                  <p className="mt-2 border-l-2 border-[#0066cc]/30 pl-3 text-[13px] leading-relaxed text-[#6b7280] md:text-sm">
                     {m.detail}
                   </p>
                 </div>

@@ -23,32 +23,28 @@ export function ImpactCards() {
   return (
     <section
       id="impact"
-      className="scroll-mt-6 border-t border-white/[0.06] bg-ink px-6 py-24 md:py-28"
+      className="scroll-mt-4 border border-[#c5cad3] bg-white px-3 py-8 shadow-sm sm:px-5 sm:py-10"
       aria-labelledby="impact-heading"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl font-sans">
         <Reveal>
           <h2
             id="impact-heading"
-            className="text-center font-display text-3xl font-medium text-mist md:text-4xl"
+            className="text-center text-2xl font-bold text-[#cc0000] sm:text-3xl"
           >
-            Impact, in four quiet truths
+            Impact
           </h2>
-          <p className="mx-auto mt-3 max-w-lg text-center text-sm text-slate-400">
-            The work shows up in companies — and in the people who carry the lessons
-            forward.
+          <p className="mx-auto mt-2 max-w-lg text-center text-sm text-[#6b7280]">
+            In four quiet truths — the work shows up in companies and in people.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:gap-6">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:gap-5">
           {cards.map((c, i) => (
             <Reveal key={c.title} delay={0.06 * i}>
-              <article className="group relative h-full overflow-hidden rounded-2xl border border-white/[0.08] bg-gradient-to-br from-slate-deep/40 to-navy/30 p-8 shadow-[0_0_0_1px_rgba(212,168,83,0.06)_inset] transition hover:border-gold/25 hover:shadow-[0_0_60px_-24px_rgba(212,168,83,0.35)]">
-                <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/5 blur-2xl transition group-hover:bg-gold/10" />
-                <h3 className="font-display text-2xl font-medium text-amber-50">
-                  {c.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-400 md:text-[15px]">
+              <article className="h-full rounded-md border border-[#c5cad3] bg-[#fafbfc] p-6 shadow-sm transition hover:border-[#9cb9d9]">
+                <h3 className="text-lg font-bold text-[#0066cc]">{c.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#4b5563] md:text-[15px]">
                   {c.body}
                 </p>
               </article>

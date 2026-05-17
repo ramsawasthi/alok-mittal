@@ -11,7 +11,6 @@
   --color-gold-dim: #b8923f;
   --color-amber-soft: #fcd34d;
   --color-mist: #f8fafc;
-  /* JobsAhead recall: light blue + red — editorial, restrained (not loud UI chrome) */
   --color-ja-midnight: #0a101c;
   --color-ja-deep: #0f1a2a;
   --color-ja-sky: #9dcbec;
@@ -28,13 +27,13 @@ html {
 body {
   margin: 0;
   min-height: 100svh;
-  background-color: var(--color-void);
-  color: var(--color-mist);
+  background-color: #d8e4f2;
+  color: #1f2937;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: rgba(212, 168, 83, 0.35);
-  color: #fffbeb;
+  background: rgba(0, 102, 204, 0.2);
+  color: #0f172a;
 }

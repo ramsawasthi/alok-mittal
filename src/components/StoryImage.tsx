@@ -42,12 +42,12 @@ export function StoryImage({
 function ImageFallback({ className, hint }: { className: string; hint: string }) {
   return (
     <div
-      className={`flex flex-col items-center justify-center gap-2 border border-dashed border-gold/25 bg-gradient-to-br from-white/[0.04] to-transparent px-4 py-8 text-center ${className}`}
+      className={`flex flex-col items-center justify-center gap-2 border border-dashed border-[#0066cc]/35 bg-white px-4 py-8 text-center ${className}`}
       role="img"
       aria-label={hint}
     >
       <span
-        className="font-mono text-[10px] uppercase tracking-[0.2em] text-gold/60"
+        className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#0066cc]/70"
         aria-hidden
       >
         Image

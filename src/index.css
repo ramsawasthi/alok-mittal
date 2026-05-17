@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Cormorant Garamond', ui-serif, Georgia, serif;
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --color-void: #020617;
+  --color-ink: #0b1220;
+  --color-navy: #0f172a;
+  --color-slate-deep: #1e293b;
+  --color-gold: #d4a853;
+  --color-gold-dim: #b8923f;
+  --color-amber-soft: #fcd34d;
+  --color-mist: #f8fafc;
+  /* JobsAhead recall: light blue + red — editorial, restrained (not loud UI chrome) */
+  --color-ja-midnight: #0a101c;
+  --color-ja-deep: #0f1a2a;
+  --color-ja-sky: #9dcbec;
+  --color-ja-sky-muted: #78a3c4;
+  --color-ja-azure: #c5e0f5;
+  --color-ja-red: #b93d48;
+  --color-ja-red-rich: #c9555f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background-color: var(--color-void);
+  color: var(--color-mist);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(212, 168, 83, 0.35);
+  color: #fffbeb;
+}
